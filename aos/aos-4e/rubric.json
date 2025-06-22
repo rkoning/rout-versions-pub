@@ -1,73 +1,95 @@
 {
-	"revisionNumber": 1,
-	"rubricJson": {
-		"categories": [
-			{
-				"name": "Battle Tactics",
-				"maxPoints": 20,
-				"description": "Strategic gameplay and tactical decisions during the battle",
-				"criteria": [
-					{
-						"name": "Objective Control",
-						"points": 10,
-						"description": "Control objectives at the end of each turn",
-						"maxPoints": 10
-					},
-					{
-						"name": "Enemy Units Destroyed",
-						"points": 10,
-						"description": "Successfully destroy enemy units",
-						"maxPoints": 10
-					}
-				]
-			},
-			{
-				"name": "Army Composition",
-				"maxPoints": 15,
-				"description": "Quality and balance of army list",
-				"criteria": [
-					{
-						"name": "Balanced List",
-						"points": 15,
-						"description": "Well-balanced army composition with good unit variety",
-						"maxPoints": 15
-					}
-				]
-			},
-			{
-				"name": "Sportsmanship",
-				"maxPoints": 10,
-				"description": "Player conduct and sportsmanship",
-				"criteria": [
-					{
-						"name": "Good Sportsmanship",
-						"points": 10,
-						"description": "Exhibits good sportsmanship throughout the game",
-						"maxPoints": 10
-					}
-				]
-			},
-			{
-				"name": "Army Painting",
-				"maxPoints": 5,
-				"description": "Quality of army painting and basing",
-				"criteria": [
-					{
-						"name": "Painted Army",
-						"points": 5,
-						"description": "Army is fully painted and based to a good standard",
-						"maxPoints": 5
-					}
-				]
-			}
-		],
-		"totalMaxPoints": 50,
-		"scoringNotes": "Points are awarded based on performance in each category. Maximum score is 50 points. New category added for army painting.",
-		"version": "4.0.0"
+	"title": "Age of Sigmar 4.0",
+	"description": "Standard matched play rubric for Warhammer: Age of Sigmar 4th Edition.",
+	"schema_version": "1.0.0",
+	"fields": [
+		{
+			"key": "faction",
+			"type": "select",
+			"label": "Faction",
+			"description": "Select the faction you played in this match.",
+			"required": true,
+			"options": [
+				"Stormcast Eternals",
+				"Orruk Warclans",
+				"Skaven",
+				"Soulblight Gravelords",
+				"Idoneth Deepkin",
+				"Kharadron Overlords"
+			]
+		},
+		{
+			"key": "battleTactics",
+			"type": "multiselect",
+			"label": "Completed Battle Tactics",
+			"description": "Select the battle tactics you completed during this match.",
+			"required": false,
+			"maxSelections": 6,
+			"options": [
+				"Cut Off the Head",
+				"Seize the Paths",
+				"Envelop and Strangle",
+				"Water With Blood",
+				"Invasive Species",
+				"All Roots Entwined",
+				"Stolen Seedpod",
+				"Contraband Aqua Ghyranis",
+				"Ley Line Taproot",
+				"Defiant Surge",
+				"Daring Resurgence",
+				"Master of Strategy",
+				"Raiding Party",
+				"Bold Explorers",
+				"Courageous Adventurers",
+				"Scared Centrality",
+				"Fey Strikes",
+				"Purification Rites"
+			]
+		},
+		{
+			"key": "victoryPoints",
+			"type": "number",
+			"label": "Victory Points",
+			"description": "Enter your total scored points at the end of the game.",
+			"min": 0,
+			"max": 50,
+			"required": true
+		},
+		{
+			"key": "result",
+			"type": "select",
+			"label": "Match Result",
+			"description": "What was the outcome of the match?",
+			"required": true,
+			"options": [
+				"Win",
+				"Loss",
+				"Draw"
+			]
+		},
+		{
+			"key": "notes",
+			"type": "text",
+			"label": "Player Notes (Optional)",
+			"required": false,
+			"multiline": true,
+			"placeholder": "E.g., list performance, opponent name, scenarios, house rules"
+		}
+	],
+	"winCondition": {
+		"type": "points",
+		"field": "victoryPoints",
+		"higherIsBetter": true,
+		"notes": "Winner is the player with the most points at the end of the game."
 	},
-	"authorDid": "did:plc:gamesworkshop",
-	"commitRef": "v4.0.0",
-	"sourceUrl": "https://github.com/gamesworkshop/aos-rubrics",
-	"notes": "Initial rubric version for Age of Sigmar 4th Edition with new scoring system",
-	"isLatest": true
+	"tags": [
+		"official",
+		"4e",
+		"matchedPlay"
+	],
+	"metadata": {
+		"release_date": "2025-06-21",
+		"game_version": "4.0",
+		"source": "Games Workshop Core Rules (2025)"
+	}
 }
