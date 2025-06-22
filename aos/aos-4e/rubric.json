@@ -1,0 +1,73 @@
+{
+	"revisionNumber": 1,
+	"rubricJson": {
+		"categories": [
+			{
+				"name": "Battle Tactics",
+				"maxPoints": 20,
+				"description": "Strategic gameplay and tactical decisions during the battle",
+				"criteria": [
+					{
+						"name": "Objective Control",
+						"points": 10,
+						"description": "Control objectives at the end of each turn",
+						"maxPoints": 10
+					},
+					{
+						"name": "Enemy Units Destroyed",
+						"points": 10,
+						"description": "Successfully destroy enemy units",
+						"maxPoints": 10
+					}
+				]
+			},
+			{
+				"name": "Army Composition",
+				"maxPoints": 15,
+				"description": "Quality and balance of army list",
+				"criteria": [
+					{
+						"name": "Balanced List",
+						"points": 15,
+						"description": "Well-balanced army composition with good unit variety",
+						"maxPoints": 15
+					}
+				]
+			},
+			{
+				"name": "Sportsmanship",
+				"maxPoints": 10,
+				"description": "Player conduct and sportsmanship",
+				"criteria": [
+					{
+						"name": "Good Sportsmanship",
+						"points": 10,
+						"description": "Exhibits good sportsmanship throughout the game",
+						"maxPoints": 10
+					}
+				]
+			},
+			{
+				"name": "Army Painting",
+				"maxPoints": 5,
+				"description": "Quality of army painting and basing",
+				"criteria": [
+					{
+						"name": "Painted Army",
+						"points": 5,
+						"description": "Army is fully painted and based to a good standard",
+						"maxPoints": 5
+					}
+				]
+			}
+		],
+		"totalMaxPoints": 50,
+		"scoringNotes": "Points are awarded based on performance in each category. Maximum score is 50 points. New category added for army painting.",
+		"version": "4.0.0"
+	},
+	"authorDid": "did:plc:gamesworkshop",
+	"commitRef": "v4.0.0",
+	"sourceUrl": "https://github.com/gamesworkshop/aos-rubrics",
+	"notes": "Initial rubric version for Age of Sigmar 4th Edition with new scoring system",
+	"isLatest": true
+}
