@@ -2,6 +2,7 @@
 	"title": "Age of Sigmar 4.0",
 	"description": "Standard matched play rubric for Warhammer: Age of Sigmar 4th Edition.",
 	"schema_version": "1.0.0",
+	"revisionNumber": 1,
 	"fields": [
 		{
 			"key": "faction",
